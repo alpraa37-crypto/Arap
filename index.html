@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المملكة العربية السعودية - دليل شامل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* أنماط CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(to right, #006233, #FFFFFF);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .logo-text {
+            color: #006233;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #006233;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: #006233;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #006233;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-right: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-color: #006233;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card h3 {
+            color: #006233;
+            margin-top: 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: #006233;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: #006233;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #006233;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 99;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- زر العودة للأعلى -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <!-- الرأس -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-text">المملكة العربية السعودية</div>
+            </div>
+            <h1>المملكة العربية السعودية</h1>
+            <p>قلب العالم الإسلامي وأرض الحرمين الشريفين</p>
+        </div>
+    </header>
+    
+    <!-- القائمة -->
+    <nav>
+        <ul>
+            <li><a href="#about">عن السعودية</a></li>
+            <li><a href="#people">الشعب والتقاليد</a></li>
+            <li><a href="#tourism">السياحة</a></li>
+            <li><a href="#religious">المناطق الدينية</a></li>
+            <li><a href="#transport">المواصلات</a></li>
+            <li><a href="#apps">التطبيقات</a></li>
+            <li><a href="#about-us">من نحن</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <!-- قسم عن السعودية -->
+        <section id="about">
+            <h2>عن المملكة العربية السعودية</h2>
+            <p>المملكة العربية السعودية هي أكبر دولة في شبه الجزيرة العربية، وتقع في الجنوب الغربي من قارة آسيا. يحدها من الشمال العراق والأردن، ومن الشرق الكويت وقطر والإمارات العربية المتحدة والبحرين، ومن الجنوب اليمن، ومن الغرب البحر الأحمر.</p>
+            
+            <h3>التاريخ</h3>
+            <p>تأسست المملكة العربية السعودية في عام 1932 على يد الملك عبد العزيز آل سعود. وقد شهدت المملكة منذ تأسيسها تطوراً كبيراً في جميع المجالات، وأصبحت واحدة من أهم الدول في العالم اقتصادياً وسياسياً.</p>
+            
+            <h3>النظام السياسي</h3>
+            <p>المملكة العربية السعودية دولة عربية إسلامية ذات سيادة تامة، دينها الإسلام، ودستورها كتاب الله تعالى وسنة رسوله صلى الله عليه وسلم. نظام الحكم فيها ملكي، ويكون الحكم في أبناء الملك المؤسس عبد العزيز بن عبد الرحمن الفيصل آل سعود وأبناء الأبناء.</p>
+            
+            <h3>الاقتصاد</h3>
+            <p>يعتمد الاقتصاد السعودي بشكل رئيسي على النفط، حيث تمتلك المملكة حوالي 18% من الاحتياطي العالمي للنفط. كما تشهد المملكة حالياً تحولاً كبيراً نحو تنويع الاقتصاد من خلال رؤية 2030.</p>
+        </section>
+        
+        <!-- قسم الشعب والتقاليد -->
+        <section id="people">
+            <h2>الشعب السعودي والتقاليد</h2>
+            <p>يتميز الشعب السعودي بالكرم والأصالة والالتزام بالقيم الإسلامية والعربية. وتنقسم المملكة إلى عدة مناطق لكل منها عاداتها وتقاليدها الخاصة.</p>
+            
+            <h3>العادات والتقاليد</h3>
+            <ul>
+                <li><strong>الكرم:</strong> يعتبر الكرم من أبرز صفات الشعب السعودي، حيث يحرصون على استقبال الضيوف وإكرامهم.</li>
+                <li><strong>الالتزام الديني:</strong> يلتزم السعوديون بتعاليم الإسلام في جميع مناحي الحياة.</li>
+                <li><strong>الترابط الأسري:</strong> الأسرة هي اللبنة الأساسية في المجتمع السعودي، وتتميز بترابطها القوي.</li>
+                <li><strong>الاحتفالات:</strong> يحتفل السعوديون بالأعياد الدينية والمناسبات الاجتماعية بطريقة مميزة.</li>
+            </ul>
+            
+            <h3>الزي التقليدي</h3>
+            <p>يرتدي الرجال الثوب والغترة والعقال، بينما ترتدي النساء العباءة والنقاب أو الحجاب. وتختلف ألوان وأشكال هذه الملابس حسب المنطقة والمناسبة.</p>
+            
+            <h3>المطبخ السعودي</h3>
+            <p>يتميز المطبخ السعودي بتنوعه وغناه، ومن أشهر الأطباق: الكبسة، المندي، المضبيوط، الجريش، والمرقوق. كما تشتهر المملكة بالتمور والقهوة العربية.</p>
+        </section>
+        
+        <!-- قسم السياحة -->
+        <section id="tourism">
+            <h2>المناطق السياحية</h2>
+            <p>تشهد المملكة العربية السعودية نهضة سياحية كبيرة ضمن رؤية 2030، حيث تم افتتاح العديد من المشاريع السياحية الضخمة.</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">الرياض</div>
+                    <div class="card-content">
+                        <h3>الرياض</h3>
+                        <p>عاصمة المملكة ومركزها السياسي والإداري. تشمل معالمها برج المملكة، قصر المصمك، والمتحف الوطني.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">جدة</div>
+                    <div class="card-content">
+                        <h3>جدة</h3>
+                        <p>العاصمة الاقتصادية للمملكة وتضم كورنيش جدة، نافورة الملك فهد، والبلد التاريخي.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img>الشرقية</div>
+                    <div class="card-content">
+                        <h3>المنطقة الشرقية</h3>
+                        <p>تشمل الدمام، الخبر، الظهران، والجبيل. تشتهر بشواطئها الخلابة ومشاريعها الصناعية.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">العلا</div>
+                    <div class="card-content">
+                        <h3>العلا</h3>
+                        <p>منطقة تاريخية تضم مدائن صالح التي تعتبر من مواقع التراث العالمي لليونسكو.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">أبها</div>
+                    <div class="card-content">
+                        <h3>أبها</h3>
+                        <p>عاصمة منطقة عسير وتشتهر بمناخها المعتدل وجبالها الخضراء وقراها التراثية.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">نيوم</div>
+                    <div class="card-content">
+                        <h3>نيوم</h3>
+                        <p>مشروع المستقبل الضخم على ساحل البحر الأحمر، يهدف إلى أن يكون نموذجاً للعيش المستدام.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- قسم المناطق الدينية -->
+        <section id="religious">
+            <h2>المناطق الدينية</h2>
+            <p>تعتبر المملكة العربية السعودية قلب العالم الإسلامي، حيث تقع فيها أقدس المقدسات الإسلامية.</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">مكة المكرمة</div>
+                    <div class="card-content">
+                        <h3>مكة المكرمة</h3>
+                        <p>أقدس مدينة في الإسلام، تضم المسجد الحرام والكعبة المشرفة. يقصدها millions of المسلمين لأداء فريضة الحج والعمرة.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">المدينة المنورة</div>
+                    <div class="card-content">
+                        <h3>المدينة المنورة</h3>
+                        <p>ثاني أقدس مدينة في الإسلام، تضم المسجد النبوي وقبر الرسول محمد صلى الله عليه وسلم.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">مساجد تاريخية</div>
+                    <div class="card-content">
+                        <h3>مساجد تاريخية</h3>
+                        <p>تضم المملكة العديد من المساجد التاريخية مثل مسجد القبلتين، مسجد الجمعة، ومسجد العنبرية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- قسم المواصلات -->
+        <section id="transport">
+            <h2>المواصلات والنقل</h2>
+            <p>تمتلك المملكة شبكة متطورة من وسائل النقل والمواصلات التي تربط بين مدنها ومناطقها.</p>
+            
+            <h3>النقل الجوي</h3>
+            <p>تمتلك المملكة 27 مطاراً، منها 4 مطارات دولية رئيسية في الرياض، جدة، الدمام، والمدينة المنورة. الخطوط الجوية العربية السعودية هي الناقل الوطني.</p>
+            
+            <h3>النقل البري</h3>
+            <p>شبكة الطرق في المملكة متطورة وتغطي جميع المناطق. كما يوجد قطار الحرمين السريع الذي يربط بين مكة المكرمة والمدينة المنورة مروراً بجدة.</p>
+            
+            <h3>النقل البحري</h3>
+            <p>تمتلك المملكة العديد من الموانئ على ساحلي البحر الأحمر والخليج العربي، أهمها ميناء جدة الإسلامي وميناء الملك عبد العزيز بالدمام.</p>
+            
+            <h3>خدمات التوصيل</h3>
+            <p>تتوفر في المملكة العديد من خدمات التوصيل مثل:
+            <ul>
+                <li>الشركة السعودية للبريد (سپل)</li>
+                <li>أرامكس</li>
+                <li>دي إتش إل</li>
+                <li>خدمات التوصيل المحلية مثل: هلا سوق، جاهز، وغيرها</li>
+            </ul>
+            </p>
+        </section>
+        
+        <!-- قسم التطبيقات -->
+        <section id="apps">
+            <h2>التطبيقات والخدمات الإلكترونية</h2>
+            <p>تشهد المملكة تطوراً كبيراً في مجال التطبيقات والخدمات الإلكترونية التي تسهل حياة المواطنين والمقيمين.</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">تطبيقات حكومية</div>
+                    <div class="card-content">
+                        <h3>التطبيقات الحكومية</h3>
+                        <ul>
+                            <li>ابشر (الخدمات الحكومية)</li>
+                            <li>توكلنا (التصاريح أثناء الجائحة)</li>
+                            <li>أجير (خدمات العمالة المنزلية)</li>
+                            <li>المرور السعودي</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">تطبيقات دينية</div>
+                    <div class="card-content">
+                        <h3>تطبيقات دينية</h3>
+                        <ul>
+                            <li>المصحف الإلكتروني</li>
+                            <li>مواقيت الصلاة</li>
+                            <li>تطبيقات الحج والعمرة</li>
+                            <li>القرآن الكريم</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">تطبيقات توصيل</div>
+                    <div class="card-content">
+                        <h3>تطبيقات التوصيل</h3>
+                        <ul>
+                            <li>هنقرستيشن</li>
+                            <li>طلبات</li>
+                            <li>جاهز</li>
+                            <li>نمشي</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">تطبيقات نقل</div>
+                    <div class="card-content">
+                        <h3>تطبيقات النقل</h3>
+                        <ul>
+                            <li>اوبر</li>
+                            <li>كريم</li>
+                            <li>مسارات (لرحلات القطارات)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- قسم من نحن -->
+        <section id="about-us">
+            <h2>من نحن</h2>
+            <p>نحن <strong>شركة أنس وبراء لتطوير التكنولوجيا</strong>، شركة سعودية متخصصة في تقديم حلول التكنولوجيا والبرمجيات المبتكرة. تأسست الشركة برؤية طموحة لتكون رائدة في مجال التكنولوجيا محلياً وإقليمياً.</p>
+            
+            <h3>رؤيتنا</h3>
+            <p>أن نكون الشركة الرائدة في تقديم الحلول التكنولوجية المبتكرة التي تساهم في تحويل المجتمع السعودي إلى مجتمع رقمي متطور.</p>
+            
+            <h3>رسالتنا</h3>
+            <p>تطوير حلول تكنولوجية متكاملة تلبي احتياجات العملاء وتساهم في تحقيق أهداف رؤية 2030.</p>
+            
+            <h3>قيمنا</h3>
+            <ul>
+                <li><strong>الابتكار:</strong> نؤمن بأن الابتكار هو أساس التميز.</li>
+                <li><strong>الجودة:</strong> نلتزم بأعلى معايير الجودة في جميع منتجاتنا وخدماتنا.</li>
+                <li><strong>الموثوقية:</strong> نحرص على تقديم خدمات موثوقة تلبي توقعات عملائنا.</li>
+                <li><strong>العمل الجماعي:</strong> نؤمن بقوة العمل الجماعي لتحقيق الأهداف المشتركة.</li>
+            </ul>
+        </section>
+        
+        <!-- قسم سياسة الخصوصية -->
+        <section id="privacy">
+            <h2>سياسة الخصوصية</h2>
+            <p>نحن في شركة أنس وبراء لتطوير التكنولوجيا نحرص على حماية خصوصية بيانات عملائنا ومستخدمي خدماتنا. توضح هذه السياسة كيفية جمعنا واستخدامنا وحماية معلوماتكم الشخصية.</p>
+            
+            <h3>المعلومات التي نجمعها</h3>
+            <p>قد نجمع أنواعاً مختلفة من المعلومات، بما في ذلك:</p>
+            <ul>
+                <li>المعلومات الشخصية (الاسم، البريد الإلكتروني، رقم الهاتف)</li>
+                <li>معلومات الدخول إلى حساباتكم</li>
+                <li>معلومات حول استخدامكم لخدماتنا</li>
+            </ul>
+            
+            <h3>كيف نستخدم معلوماتكم</h3>
+            <p>نستخدم المعلومات التي نجمعها لتقديم وتحسين خدماتنا، ولتلبية احتياجاتكم، وللاتصال بكم فيما يتعلق بخدماتنا.</p>
+            
+            <h3>حماية معلوماتكم</h3>
+            <p>نحن نستخدم إجراءات أمنية تقنية وإدارية مناسبة لحماية معلوماتكم الشخصية من الوصول غير المصرح به أو التعديل أو الإفشاء أو الإتلاف.</p>
+            
+            <h3>تغييرات على سياسة الخصوصية</h3>
+            <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطركم بأي تغييرات عن طريق نشر السياسة الجديدة على هذا الموقع.</p>
+        </section>
+        
+        <!-- قسم اتصل بنا -->
+        <section id="contact">
+            <h2>اتصل بنا</h2>
+            <p>نحن دائماً على استعداد للاستماع إليكم ومساعدتكم. لا تتردد في التواصل معنا عبر أي من القنوات التالية:</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>هاتف واتساب</h3>
+                    <p>+966 20 10 5 5 8 9 10 20</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>alpraaweed@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>العنوان</h3>
+                    <p>المملكة العربية السعودية</p>
+                </div>
+            </div>
+            
+            <h3>ساعات العمل</h3>
+            <p>الأحد - الخميس: 8:00 صباحاً - 5:00 مساءً</p>
+            <p>الجمعة والسبت: إجازة</p>
+        </section>
+    </div>
+    
+    <!-- الفوتر -->
+    <footer>
+        <div class="footer-content">
+            <h3>شركة أنس وبراء لتطوير التكنولوجيا</h3>
+            <div class="footer-links">
+                <a href="#about">عن السعودية</a>
+                <a href="#about-us">من نحن</a>
+                <a href="#privacy">سياسة الخصوصية</a>
+                <a href="#contact">اتصل بنا</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>جميع الحقوق محفوظة &copy; 2023 شركة أنس وبراء لتطوير التكنولوجيا</p>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript للتفاعل
+        document.addEventListener('DOMContentLoaded', function() {
+            // زر العودة للأعلى
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'flex';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            
+            // تنعيم التمرير للروابط الداخلية
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
